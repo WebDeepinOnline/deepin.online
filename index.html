@@ -1,110 +1,92 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8">
 		<title>深度在线</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
 		<link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon" />
-		<style>
-			html,
-			body {
-				padding: 0;
-				margin: 0;
-				background: #272727;
-				font: 400 16px/1.7 "Microsoft JhengHei", sans-serif;
-			}
-
-			div,
-			ul,
-			li,
-			h1,
-			p,
-			h2 {
-				padding: 0;
-				margin: 0;
-			}
-
-			ul,
-			li {
-				list-style: none;
-			}
-
-			.main {
-				text-align: center;
-			}
-
-			.content {
-				background: #fff;
-				padding: 20px;
-				display: inline-block;
-			}
-
-			.content-top {
-				font-size: 14px;
-			}
-
-			.content-top h2 {
-				background: #FF8901;
-				color: #fff;
-				font-size: 20px;
-				padding: 10px 0;
-				font-weight: normal;
-			}
-
-			.content-top a {
-				display: block;
-				color: #FF8901;
-				font-style: normal;
-				display: block;
-				margin: 2px 0;
-			}
-
-			.content-top li {
-				padding: 20px 0;
-				border-bottom: 1px solid #E2E0DE
-			}
-
-			.main h1 {
-				color: #FF8901;
-				font-weight: normal;
-				padding: 40px 0;
-			}
-		</style>
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
 	</head>
-
 	<body>
-		<div class="main">
-			<h1>深度在线导航 | 导航地址发布页20190601</h1>
-			<div class="content">
-				<div class="content-top">
-					<h2>Ctrl+D 收藏本页</h2>
-					<ul>
-						<li>
-							常用
-							<a href="https://docs.qq.com" target="_blank">腾讯文档</a>
-							<a href="https://docs.qq.com" target="_blank">腾讯文档</a>
-							<a href="https://docs.qq.com" target="_blank">腾讯文档</a>
-						</li>
-						<li>
-							扒酷虎精品影库最新地址
-							<a href="https://docs.qq.com" target="_blank">腾讯文档</a>
-							<a href="https://docs.qq.com" target="_blank">腾讯文档</a>
-						</li>
-						<li>
-							骑虎精品影库发布页
-							<a href="https://docs.qq.com" target="_blank">腾讯文档</a>
-						</li>
-						<li>
-							骑虎精品影库备用地址
-							<a href="https://docs.qq.com" target="_blank">腾讯文档</a>
-							<a href="https://docs.qq.com" target="_blank">腾讯文档</a>
-						</li>
 
-					</ul>
-					<p>如果以上地址均无法打开，欢迎发送邮件告知： <br>
-						waxuan@deepin.online<br>
-						自动回复最新导航！</p>
+		<div class="container">
+			<h2 style="text-align: center;">深度在线导航</h2>
+			<br>
+			<!-- Nav tabs -->
+			<div class="d-flex justify-content-center">
+				<ul class="nav nav-tabs" role="tablist">
+					<li class="nav-item">
+						<a class="nav-link active" data-toggle="tab" href="#Home">首页</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#Handy">常用</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#Work">工作</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#Fun">娱乐</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#Request">请求</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#Issues">问题</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#Marketplace">市井</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#Explore">探讨</a>
+					</li>
+				</ul>
+			</div>
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div id="Home" class="container tab-pane active"><br>
+					<h3>HOME</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+						magna aliqua.</p>
+				</div>
+				<div id="Handy" class="container tab-pane fade"><br>
+					<h3>Menu 1</h3>
+					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+				<div id="Work" class="container tab-pane fade"><br>
+					<h3>Menu 2</h3>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+						aperiam.</p>
+				</div>
+				<div id="Fun" class="container tab-pane fade"><br>
+					<h3>Fun</h3>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+						aperiam.</p>
+				</div>
+				<div id="Request" class="container tab-pane fade"><br>
+					<h3>Request</h3>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+						aperiam.</p>
+				</div>
+				<div id="Issues" class="container tab-pane fade"><br>
+					<h3>Issues</h3>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+						aperiam.</p>
+				</div>
+				<div id="Marketplace" class="container tab-pane fade"><br>
+					<h3>Marketplace</h3>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+						aperiam.</p>
+				</div>
+				<div id="Explore" class="container tab-pane fade"><br>
+					<h3>Explore</h3>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+						aperiam.</p>
 				</div>
 			</div>
 		</div>
+
 	</body>
 </html>
