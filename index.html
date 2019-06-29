@@ -10,6 +10,20 @@
 		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
 		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
 	</head>
+	<style type="text/css">
+		.atarget {
+			padding: 10px;
+		}
+
+		.flexcenter {
+			display: flex;
+			flex-flow: row wrap;
+			/* 水平折叠: */
+			align-items: center;
+			justify-content: center;
+			/* 设置上下左右居中 */
+		}
+	</style>
 	<body>
 		<div class="container">
 			<h2 style="text-align: center;color: #FF8901; padding: 20px;">深度在线导航</h2>
@@ -50,14 +64,59 @@
 			<div class="tab-content">
 				<div id="Home" class="container tab-pane active"><br>
 					<h3>HOME</h3>
-					<div style="text-align: center;">
-						<a href="https://pay.weixin.qq.com" target="_blank" style="padding: 10px;">微信支付</a>
-						<a href="https://mp.weixin.qq.com" target="_blank" style="padding: 10px;">公众平台</a>
-						<a href="https://developers.weixin.qq.com" target="_blank" style="padding: 10px;">微信开发平台</a>
-						<a href="https://work.weixin.qq.com" target="_blank" style="padding: 10px;">企业微信</a>
-						<a href="https://docs.qq.com" target="_blank" style="padding: 10px;">腾讯文档</a>
+					<!-- 折叠菜单开始 -->
+					<div id="accordion">
+						<!-- 卡片一开始 -->
+						<div class="card">
+							<a class="card-link card-header" data-toggle="collapse" href="#collapseOne" style="text-align: center;">
+								工作
+							</a>
+							<div id="collapseOne" class="collapse show" data-parent="#accordion">
+								<div class="card-body flexcenter">
+									<a href="https://pay.weixin.qq.com" target="_blank" class="atarget">微信支付</a>
+									<a href="https://mp.weixin.qq.com" target="_blank" class="atarget">公众平台</a>
+									<a href="https://developers.weixin.qq.com" target="_blank" class="atarget">微信开发平台</a>
+									<a href="https://work.weixin.qq.com" target="_blank" class="atarget">企业微信</a>
+									<a href="https://docs.qq.com" target="_blank" class="atarget">腾讯文档</a>
+									<a href="https://cloud.tencent.com" target="_blank" class="atarget">腾讯云</a>
+									<a href="http://www.lixiaocrm.com" target="_blank" class="atarget">励销</a>
+									<a href="https://alipay.020leader.com" target="_blank" class="atarget">移领统一平台</a>
+									<a href="http://t.020leader.com" target="_blank" class="atarget">移领服务商平台</a>
+									<a href="https://docs.qq.com" target="_blank" class="atarget">腾讯文档</a>
+									<a href="https://cloud.tencent.com" target="_blank" class="atarget">腾讯云</a>
+									<a href="http://www.lixiaocrm.com" target="_blank" class="atarget">励销</a>
+									<a href="https://alipay.020leader.com" target="_blank" class="atarget">移领统一平台</a>
+									<a href="http://t.020leader.com" target="_blank" class="atarget">移领服务商平台</a>
 
+								</div>
+							</div>
+						</div>
+						<!-- 卡片一结束 -->
+
+						<div class="card">
+							<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseTwo" style="text-align: center;">
+								选项二
+							</a>
+							<div id="collapseTwo" class="collapse" data-parent="#accordion">
+								<div class="card-body">
+									#2 内容：菜鸟教程 -- 学的不仅是技术，更是梦想！！！
+								</div>
+							</div>
+						</div>
+						<div class="card">
+							<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseThree" style="text-align: center;">
+								选项三
+							</a>
+							<div id="collapseThree" class="collapse" data-parent="#accordion">
+								<div class="card-body">
+									#3 内容：菜鸟教程 -- 学的不仅是技术，更是梦想！！！
+								</div>
+							</div>
+						</div>
 					</div>
+
+					<!-- 折叠菜单结束 -->
+
 				</div>
 				<div id="Study" class="container tab-pane fade"><br>
 					<h3>Study</h3>
@@ -101,17 +160,26 @@
 					<!-- 折叠菜单开始 -->
 					<div id="accordion">
 						<div class="card">
-							<a class="card-link card-header" data-toggle="collapse" href="#collapseOne">
-								选项一
+							<a class="card-link card-header" data-toggle="collapse" href="#collapseOne" style="text-align: center;">
+								工作
 							</a>
 							<div id="collapseOne" class="collapse show" data-parent="#accordion">
 								<div class="card-body">
-									#1 内容：菜鸟教程 -- 学的不仅是技术，更是梦想！！！
+									<div style="text-align: center;">
+										<a href="https://cloud.tencent.com" target="_blank" style="padding: 10px;">腾讯云</a>
+										<a href="https://www.aliyun.com" target="_blank" style="padding: 10px;">阿里云</a>
+										<a href="https://cloud.baidu.com" target="_blank" style="padding: 10px;">百度云</a>
+										<a href="https://www.163yun.com" target="_blank" style="padding: 10px;">网易云</a>
+										<a href="https://www.huaweicloud.com" target="_blank" style="padding: 10px;">华为云</a><br>
+										<a href="http://www.lixiaocrm.com" target="_blank" style="padding: 10px;">励销</a>
+										<a href="https://alipay.020leader.com" target="_blank" style="padding: 10px;">移领统一平台</a>
+										<a href="http://t.020leader.com" target="_blank" style="padding: 10px;">移领服务商平台</a>
+									</div>
 								</div>
 							</div>
 						</div>
 						<div class="card">
-							<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseTwo">
+							<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseTwo" style="text-align: center;">
 								选项二
 							</a>
 							<div id="collapseTwo" class="collapse" data-parent="#accordion">
@@ -121,7 +189,7 @@
 							</div>
 						</div>
 						<div class="card">
-							<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseThree">
+							<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseThree" style="text-align: center;">
 								选项三
 							</a>
 							<div id="collapseThree" class="collapse" data-parent="#accordion">
