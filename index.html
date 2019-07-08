@@ -4,27 +4,37 @@
 		<title>深度在线</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://weui.io/weui.css">
+		<link rel="stylesheet" href="./index/weui.css">
+
 		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
-		<link rel="shortcut icon" href="https://www.baidu.com/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="./index/bootstrap.min.css">
+
+		<link rel="shortcut icon" href="./index/favicon.ico" type="image/x-icon" />
 		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="./index/jquery.min.js"></script>
 		<script src="https://cdn.staticfile.org/popper.js/1.12.5/umd/popper.min.js"></script>
+		<script src="./index/popper.min.js"></script>
 		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/js/bootstrap.min.js"></script>
+		<script src="./index/bootstrap.min.js"></script>
 	</head>
 	<style type="text/css">
 		.atarget {
-			text-decoration:none;
+			text-decoration: none;
 			padding: 3px 10px;
 			margin: 10px;
 			border: 1px solid #ccc;
 			border-radius: 6px;
 		}
+
 		.atarget:hover {
 			color: ghostwhite;
-			font-size:100%;
-			text-decoration:none;
+			font-size: 100%;
+			text-decoration: none;
 			border-radius: 10px;
-			background-color:#FF8901;
+			background-color: #FF8901;
 		}
+
 		.flexcenter {
 			display: flex;
 			flex-flow: row wrap;
@@ -34,9 +44,48 @@
 			/* 设置上下左右居中 */
 		}
 	</style>
+
 	<body>
 		<div class="container">
-			<h2 style="text-align: center;color: #FF8901; padding: 20px;">深度在线导航</h2>
+			<!--  Tab nav开始 -->
+			<h2 style="text-align: center;color: #FF8901; padding: 20px;">深 度 在 线</h2>
+			<div class="flexcenter">
+				<script type="text/javascript">
+					function go(formname) {
+						var url = "http://www.baidu.com/baidu";
+						formname.method = "get";
+						if (formname.value == "1") {
+							document.search_form1.word.value = document.search_form1.word.value + "site:www.runoob.com";
+						} else if (formname.value == "2") {
+							document.search_form1.word.value = document.search_form1.word.value + "site:kf.qq.com";
+						} else if (formname.value == "3") {
+							document.search_form1.word.value = document.search_form1.word.value + "site:www.guoxue.com";
+						}
+						formname.action = url;
+						return true;
+					}
+				</script>
+				<form name="search_form1" target="_blank" onsubmit="return go(this)">
+					<input name="word" size="40" value="">
+					<input type="submit" value="百度搜索"><br>
+					<input checked name="myselect" onclick=javascript:this.form.value=0; type="radio" value="0">
+					<font style="font-size: 12px">互联网</font>
+					<input name="myselect" onclick=javascript:this.form.value=1; type="radio" value="1">
+					<font style="font-size: 12px">菜鸟网</font>
+					<input name="myselect" onclick=javascript:this.form.value=2; type="radio" value="2">
+					<font style="font-size: 12px">腾讯客服</font>
+					<input name="myselect" onclick=javascript:this.form.value=3; type="radio" value="3">
+					<font style="font-size: 12px">国学网</font>
+				</form>
+
+				<!-- <form action="http://www.baidu.com/baidu" target="_blank">
+					<div align="center">
+						<input name="tn" type="hidden" value="baidu">
+						<input type="text" name="word" size=40px>
+						<input type="submit" value="在线查询">
+					</div>
+				</form> -->
+			</div>
 			<br>
 			<!-- Nav tabs -->
 			<div class="d-flex justify-content-center">
@@ -57,10 +106,7 @@
 						<a class="nav-link" data-toggle="tab" href="#Fun">娱乐</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#Request">请求</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" data-toggle="tab" href="#Issues">问题</a>
+						<a class="nav-link" data-toggle="tab" href="#Software">软件</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" data-toggle="tab" href="#Marketplace">市井</a>
@@ -68,20 +114,86 @@
 					<li class="nav-item">
 						<a class="nav-link" data-toggle="tab" href="#Explore">探讨</a>
 					</li>
+					<li class="nav-item">
+						<a class="nav-link" data-toggle="tab" href="#Request">请求</a>
+					</li>
 				</ul>
 			</div>
-			<!-- Tab panes -->
-			<div class="tab-content">
-				<div id="Home" class="container tab-pane active"><br>
-					<!-- 首页HOME开始 -->
-					<!-- 折叠菜单开始 -->
-					<div id="accordion">
-						<!-- 卡片一开始 -->
-						<div class="card">
-							<a class="card-link card-header" data-toggle="collapse" href="#collapseOne" style="text-align: center;">
-								One:常用+生活+办公
-							</a>
-							<div id="collapseOne" class="collapse show" data-parent="#accordion">
+		</div>
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<!-- 首页HOME开始 -->
+			<div id="Home" class="container tab-pane active"><br>
+				<div class="card">
+					<h3 class="card-header flexcenter">首页 + 高频</h3>
+					<div>
+						<div class="card-body flexcenter">
+							<a href="https://bbs.deepin.org" target="_blank" class="atarget">深度系统</a>
+							<a href="https://mail.qq.com" target="_blank" class="atarget">QQ邮箱</a>
+							<a href="https://www.baidu.com" class="atarget" target="_blank">百度</a>
+							<a href="https://pay.weixin.qq.com" target="_blank" class="atarget">微信支付</a>
+							<a href="https://mp.weixin.qq.com" target="_blank" class="atarget">公众平台</a>
+							<a href="https://developers.weixin.qq.com" target="_blank" class="atarget">微信开发平台</a>
+							<a href="https://docs.qq.com" target="_blank" class="atarget">腾讯文档</a>
+							<a href="https://drive.wps.cn" target="_blank" class="atarget">金山文档</a>
+							<a href="http://kf.qq.com" target="_blank" class="atarget">腾讯客服</a>
+							<a href="https://lexiangla.com" target="_blank" class="atarget">腾讯乐享</a>
+							<a href="https://cloud.tencent.com" target="_blank" class="atarget">腾讯云</a>
+							<a href="https://cloud.tencent.com/product/cpay" target="_blank" class="atarget">腾讯云支付</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="card">
+					<h3 class="card-header flexcenter">高频 + 工作</h3>
+					<div>
+						<div class="card-body flexcenter">
+							<a href="https://work.weixin.qq.com" class="atarget" target="_blank">企业微信</a>
+							<a href="https://exmail.qq.com" class="atarget" target="_blank">企业邮箱</a>
+							<a href="https://www.tapd.cn" class="atarget" target="_blank">Tapd</a>
+							<a href="http://www.lixiaocrm.com" class="atarget" target="_blank">励销</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 常用面板开始 -->
+			<div id="Handy" class="container tab-pane fade"><br>
+
+				<!-- 折叠菜单开始 -->
+				<div id="accordion">
+					<!-- 卡片一开始 -->
+					<div class="card">
+						<a class="card-link card-header" data-toggle="collapse" href="#collapseOne" style="text-align: center;">
+							One:常用+生活+办公
+						</a>
+						<div id="collapseOne" class="collapse show" data-parent="#accordion">
+							<div class="card-body flexcenter">
+								<a href="https://pay.weixin.qq.com" target="_blank" class="atarget">微信支付</a>
+								<a href="https://mp.weixin.qq.com" target="_blank" class="atarget">公众平台</a>
+								<a href="https://developers.weixin.qq.com" target="_blank" class="atarget">微信开发平台</a>
+								<a href="https://work.weixin.qq.com" target="_blank" class="atarget">企业微信</a>
+								<a href="https://exmail.qq.com" target="_blank" class="atarget">企业邮箱</a>
+								<a href="https://docs.qq.com" target="_blank" class="atarget">腾讯文档</a>
+								<a href="http://tmkj.ynwxxcx.com" target="_blank" class="atarget">腾马小程序</a>
+								<a href="http://ynxxwfw.ynwxxcx.com" target="_blank" class="atarget">偕行小程序</a>
+								<a href="https://cloud.tencent.com" target="_blank" class="atarget">腾讯云</a>
+								<a href="http://www.lixiaocrm.com" target="_blank" class="atarget">励销</a>
+								<a href="https://alipay.020leader.com" target="_blank" class="atarget">移领统一平台</a>
+								<a href="http://t.020leader.com" target="_blank" class="atarget">移领服务商平台</a>
+								<a href="http://waxuan.deepin.online" target="_blank" class="atarget">GitOnline</a>
+								<a href="http://www.deepin.online" target="_blank" class="atarget">DeepinOline</a>
+								<a href="https://docs.qq.com/doc/DZHFRRXVHS0xGaWRa" target="_blank" class="atarget">问题列表</a>
+							</div>
+						</div>
+					</div>
+					<!-- 卡片一结束 -->
+					<div class="card">
+						<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseTwo" style="text-align: center;">
+							Two：学习+平台+管理
+						</a>
+						<div id="collapseTwo" class="collapse" data-parent="#accordion">
+							<div class="card-body">
+								#1 内容：学习平台管理
 								<div class="card-body flexcenter">
 									<a href="https://pay.weixin.qq.com" target="_blank" class="atarget">微信支付</a>
 									<a href="https://mp.weixin.qq.com" target="_blank" class="atarget">公众平台</a>
@@ -92,191 +204,278 @@
 									<a href="http://www.lixiaocrm.com" target="_blank" class="atarget">励销</a>
 									<a href="https://alipay.020leader.com" target="_blank" class="atarget">移领统一平台</a>
 									<a href="http://t.020leader.com" target="_blank" class="atarget">移领服务商平台</a>
-									<a href="http://waxuan.deepin.online" target="_blank" class="atarget">GitOnline</a>
-									<a href="http://www.deepin.online" target="_blank" class="atarget">DeepinOline</a>
-									<a href="https://docs.qq.com/doc/DZHFRRXVHS0xGaWRa" target="_blank" class="atarget">问题列表</a>
 								</div>
-							</div>
-						</div>
-						<!-- 卡片一结束 -->
-						<div class="card">
-							<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseTwo" style="text-align: center;">
-								Two：学习+平台+管理
-							</a>
-							<div id="collapseTwo" class="collapse" data-parent="#accordion">
-								<div class="card-body">
-									#1 内容：学习平台管理
-									<div class="card-body flexcenter">
-										<a href="https://pay.weixin.qq.com" target="_blank" class="atarget">微信支付</a>
-										<a href="https://mp.weixin.qq.com" target="_blank" class="atarget">公众平台</a>
-										<a href="https://developers.weixin.qq.com" target="_blank" class="atarget">微信开发平台</a>
-										<a href="https://work.weixin.qq.com" target="_blank" class="atarget">企业微信</a>
-										<a href="https://docs.qq.com" target="_blank" class="atarget">腾讯文档</a>
-										<a href="https://cloud.tencent.com" target="_blank" class="atarget">腾讯云</a>
-										<a href="http://www.lixiaocrm.com" target="_blank" class="atarget">励销</a>
-										<a href="https://alipay.020leader.com" target="_blank" class="atarget">移领统一平台</a>
-										<a href="http://t.020leader.com" target="_blank" class="atarget">移领服务商平台</a>
-									</div>
-									#2 内容：学习平台管理
-									<div class="card-body flexcenter">
-										<a href="https://pay.weixin.qq.com" target="_blank" class="atarget">微信支付</a>
-										<a href="https://mp.weixin.qq.com" target="_blank" class="atarget">公众平台</a>
-										<a href="https://developers.weixin.qq.com" target="_blank" class="atarget">微信开发平台</a>
-										<a href="https://work.weixin.qq.com" target="_blank" class="atarget">企业微信</a>
-										<a href="https://docs.qq.com" target="_blank" class="atarget">腾讯文档</a>
-										<a href="https://cloud.tencent.com" target="_blank" class="atarget">腾讯云</a>
-										<a href="http://www.lixiaocrm.com" target="_blank" class="atarget">励销</a>
-										<a href="https://alipay.020leader.com" target="_blank" class="atarget">移领统一平台</a>
-										<a href="http://t.020leader.com" target="_blank" class="atarget">移领服务商平台</a>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseThree" style="text-align: center;">
-								Tree：网络+后台+编辑
-							</a>
-							<div id="collapseThree" class="collapse" data-parent="#accordion">
+								#2 内容：学习平台管理
 								<div class="card-body flexcenter">
-									<a href="https://github.com" target="_blank" class="atarget">Github</a>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseFour" style="text-align: center;">
-								选项四
-							</a>
-							<div id="collapseFour" class="collapse" data-parent="#accordion">
-								<div class="card-body flexcenter">
-									<a href="http://www.ynxxwfw.com" target="_blank" class="atarget">偕行官网</a>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseFive" style="text-align: center;">
-								选项五
-							</a>
-							<div id="collapseFive" class="collapse" data-parent="#accordion">
-								<div class="card-body flexcenter">
-									<a href="http://www.ynxxwfw.com" target="_blank" class="atarget">偕行官网</a>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseSix" style="text-align: center;">
-								选项六
-							</a>
-							<div id="collapseSix" class="collapse" data-parent="#accordion">
-								<div class="card-body flexcenter">
-									<a href="http://www.ynxxwfw.com" target="_blank" class="atarget">偕行官网</a>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseSeven" style="text-align: center;">
-								选项七
-							</a>
-							<div id="collapseSeven" class="collapse" data-parent="#accordion">
-								<div class="card-body flexcenter">
-									<a href="http://www.ynxxwfw.com" target="_blank" class="atarget">偕行官网</a>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseEight" style="text-align: center;">
-								选项八
-							</a>
-							<div id="collapseEight" class="collapse" data-parent="#accordion">
-								<div class="card-body flexcenter">
-									<a href="http://www.ynxxwfw.com" target="_blank" class="atarget">偕行官网</a>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseNine" style="text-align: center;">
-								选项九
-							</a>
-							<div id="collapseNine" class="collapse" data-parent="#accordion">
-								<div class="card-body flexcenter">
-									<a href="http://www.ynxxwfw.com" target="_blank" class="atarget">偕行官网</a>
-								</div>
-							</div>
-						</div>
-						<div class="card">
-							<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseTen" style="text-align: center;">
-								选项十
-							</a>
-							<div id="collapseTen" class="collapse" data-parent="#accordion">
-								<div class="card-body flexcenter">
-									<a href="http://www.ynxxwfw.com" target="_blank" class="atarget">偕行官网</a>
+									<a href="https://pay.weixin.qq.com" target="_blank" class="atarget">微信支付</a>
+									<a href="https://mp.weixin.qq.com" target="_blank" class="atarget">公众平台</a>
+									<a href="https://developers.weixin.qq.com" target="_blank" class="atarget">微信开发平台</a>
+									<a href="https://work.weixin.qq.com" target="_blank" class="atarget">企业微信</a>
+									<a href="https://docs.qq.com" target="_blank" class="atarget">腾讯文档</a>
+									<a href="https://cloud.tencent.com" target="_blank" class="atarget">腾讯云</a>
+									<a href="http://www.lixiaocrm.com" target="_blank" class="atarget">励销</a>
+									<a href="https://alipay.020leader.com" target="_blank" class="atarget">移领统一平台</a>
+									<a href="http://t.020leader.com" target="_blank" class="atarget">移领服务商平台</a>
 								</div>
 							</div>
 						</div>
 					</div>
-					<!-- 折叠菜单结束 -->
-				</div>
-				<div id="Study" class="container tab-pane fade"><br>
-					<h3>Study</h3>
-					<div style="text-align: center;">
-						<a href="https://map.qq.com/" target="_blank" style="padding: 10px;">腾讯地图</a>
-						<a href="https://www.baidu.com" target="_blank" style="padding: 10px;">百度</a>
-						<a href="https://mp.weixin.qq.com" target="_blank" style="padding: 10px;">公众平台</a>
-						<a href="https://developers.weixin.qq.com" target="_blank" style="padding: 10px;">微信开发平台</a>
-						<a href="https://work.weixin.qq.com" target="_blank" style="padding: 10px;">企业微信</a>
-						<a href="https://docs.qq.com" target="_blank" style="padding: 10px;">腾讯文档</a>
-						<a href="http://www.lixiaocrm.com" target="_blank" style="padding: 10px;">励销</a>
+					<div class="card">
+						<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseThree" style="text-align: center;">
+							Tree：网络+后台+编辑
+						</a>
+						<div id="collapseThree" class="collapse" data-parent="#accordion">
+							<div class="card-body flexcenter">
+								<a href="https://github.com" target="_blank" class="atarget">Github</a>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseFour" style="text-align: center;">
+							选项四
+						</a>
+						<div id="collapseFour" class="collapse" data-parent="#accordion">
+							<div class="card-body flexcenter">
+								<a href="http://www.ynxxwfw.com" target="_blank" class="atarget">偕行官网</a>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseFive" style="text-align: center;">
+							选项五
+						</a>
+						<div id="collapseFive" class="collapse" data-parent="#accordion">
+							<div class="card-body flexcenter">
+								<a href="http://www.ynxxwfw.com" target="_blank" class="atarget">偕行官网</a>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseSix" style="text-align: center;">
+							选项六
+						</a>
+						<div id="collapseSix" class="collapse" data-parent="#accordion">
+							<div class="card-body flexcenter">
+								<a href="http://www.ynxxwfw.com" target="_blank" class="atarget">偕行官网</a>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseSeven" style="text-align: center;">
+							选项七
+						</a>
+						<div id="collapseSeven" class="collapse" data-parent="#accordion">
+							<div class="card-body flexcenter">
+								<a href="http://www.ynxxwfw.com" target="_blank" class="atarget">偕行官网</a>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseEight" style="text-align: center;">
+							选项八
+						</a>
+						<div id="collapseEight" class="collapse" data-parent="#accordion">
+							<div class="card-body flexcenter">
+								<a href="http://www.ynxxwfw.com" target="_blank" class="atarget">偕行官网</a>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseNine" style="text-align: center;">
+							选项九
+						</a>
+						<div id="collapseNine" class="collapse" data-parent="#accordion">
+							<div class="card-body flexcenter">
+								<a href="http://www.ynxxwfw.com" target="_blank" class="atarget">偕行官网</a>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<a class="collapsed card-link card-header" data-toggle="collapse" href="#collapseTen" style="text-align: center;">
+							选项十
+						</a>
+						<div id="collapseTen" class="collapse" data-parent="#accordion">
+							<div class="card-body flexcenter">
+								<a href="http://www.ynxxwfw.com" target="_blank" class="atarget">偕行官网</a>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div id="Handy" class="container tab-pane fade"><br>
-					<h3>Handy</h3>
-					<div style="text-align: center;">
-						<a href="https://map.qq.com/" target="_blank" style="padding: 10px;">腾讯地图</a>
-						<a href="https://www.baidu.com" target="_blank" style="padding: 10px;">百度</a>
-						<a href="https://mp.weixin.qq.com" target="_blank" style="padding: 10px;">公众平台</a>
-						<a href="https://developers.weixin.qq.com" target="_blank" style="padding: 10px;">微信开发平台</a>
-						<a href="https://work.weixin.qq.com" target="_blank" style="padding: 10px;">企业微信</a>
-						<a href="https://docs.qq.com" target="_blank" style="padding: 10px;">腾讯文档</a>
-						<a href="http://www.lixiaocrm.com" target="_blank" style="padding: 10px;">励销</a>
+				<!-- 折叠菜单结束 -->
+			</div>
+			<!-- 学习面板开始 -->
+			<div id="Study" class="container tab-pane fade"><br>
+				<div class="card">
+					<h3 class="card-header flexcenter">学习 + 常用</h3>
+					<div>
+						<div class="card-body flexcenter">
+							<a href="https://pay.weixin.qq.com" target="_blank" class="atarget">微信支付</a>
+							<a href="https://mp.weixin.qq.com" target="_blank" class="atarget">公众平台</a>
+						</div>
 					</div>
 				</div>
-				<div id="Work" class="container tab-pane fade"><br>
-					<h3>Work</h3>
-					<div style="text-align: center;">
-						<a href="https://cloud.tencent.com" target="_blank" style="padding: 10px;">腾讯云</a>
-						<a href="https://www.aliyun.com" target="_blank" style="padding: 10px;">阿里云</a>
-						<a href="https://cloud.baidu.com" target="_blank" style="padding: 10px;">百度云</a>
-						<a href="https://www.163yun.com" target="_blank" style="padding: 10px;">网易云</a>
-						<a href="https://www.huaweicloud.com" target="_blank" style="padding: 10px;">华为云</a>
-						<a href="http://www.lixiaocrm.com" target="_blank" style="padding: 10px;">励销</a>
-						<a href="https://alipay.020leader.com" target="_blank" style="padding: 10px;">移领统一平台</a>
-						<a href="http://t.020leader.com" target="_blank" style="padding: 10px;">移领服务商平台</a>
+				<div class="card">
+					<h3 class="card-header flexcenter">插件 + 推荐</h3>
+					<div>
+						<div class="card-body flexcenter">
+							<a class="atarget" target="_blank" href="https://u.tools">UTool</a>
+						</div>
 					</div>
 				</div>
-				<div id="Fun" class="container tab-pane fade"><br>
-					<h3>Fun</h3>
-
-				</div>
-				<div id="Request" class="container tab-pane fade"><br>
-					<h3>Request</h3>
-					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-						aperiam.</p>
-				</div>
-				<div id="Issues" class="container tab-pane fade"><br>
-					<h3>Issues</h3>
-					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-						aperiam.</p>
-				</div>
-				<div id="Marketplace" class="container tab-pane fade"><br>
-					<h3>Marketplace</h3>
-					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-						aperiam.</p>
-				</div>
-				<div id="Explore" class="container tab-pane fade"><br>
-					<h3>Explore</h3>
-					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-						aperiam.</p>
+				<div class="card">
+					<h3 class="card-header flexcenter">在线 + 运行</h3>
+					<div>
+						<div class="card-body flexcenter">
+							<a class="atarget" target="_blank" href="https://c.runoob.com">菜鸟工具</a>
+							<a class="atarget" target="_blank" href="https://tool.lu">Tool.Lu</a>
+							<a class="atarget" target="_blank" href="http://tools.jb51.net/">51Jb.Net</a>
+							<a class="atarget" target="_blank" href="http://www.dooccn.com">Dooccn.Com</a>
+							<a class="atarget" target="_blank" href="http://code.y444.cn">Y444.Cn</a>
+						</div>
+					</div>
 				</div>
 			</div>
+			<!-- 工作面板开始 -->
+			<div id="Work" class="container tab-pane fade"><br>
+				<div class="card">
+					<h3 class="card-header flexcenter">办公 + 常用</h3>
+					<div>
+						<div class="card-body flexcenter">
+							<a href="https://docs.qq.com/doc/DZFFTZGpjakNlcVlQ" target="_blank" class="atarget">问题列表</a>
+							<a href="https://pay.weixin.qq.com" target="_blank" class="atarget">微信支付</a>
+							<a href="https://mp.weixin.qq.com" target="_blank" class="atarget">公众平台</a>
+							<a href="https://developers.weixin.qq.com" target="_blank" class="atarget">微信开发平台</a>
+							<a href="https://docs.qq.com" target="_blank" class="atarget">腾讯文档</a>
+							<a href="https://drive.wps.cn" target="_blank" class="atarget">金山文档</a>
+							<a href="http://kf.qq.com" target="_blank" class="atarget">腾讯客服</a>
+							<a href="https://lexiangla.com" target="_blank" class="atarget">腾讯乐享</a>
+							<a href="https://cloud.tencent.com" target="_blank" class="atarget">腾讯云</a>
+							<a href="https://cloud.tencent.com/product/cpay" target="_blank" class="atarget">腾讯云支付</a>
+						</div>
+					</div>
+					<h3 class="card-header flexcenter">平台 + 企业</h3>
+					<div>
+						<div class="card-body flexcenter">
+							<a href="https://work.weixin.qq.com" target="_blank" class="atarget">企业微信</a>
+							<a href="https://exmail.qq.com" target="_blank" class="atarget">企业邮箱</a>
+							<a href="http://www.lixiaocrm.com" target="_blank" class="atarget">励销</a>
+							<a href="http://tmkj.ynwxxcx.com" target="_blank" class="atarget">腾马小程序</a>
+							<a href="http://ynxxwfw.ynwxxcx.com" target="_blank" class="atarget">偕行小程序</a>
+							<a href="https://alipay.020leader.com" target="_blank" class="atarget">移领统一平台</a>
+							<a href="http://t.020leader.com" target="_blank" class="atarget">移领服务商平台</a>
+							<a href="http://waxuan.deepin.online" target="_blank" class="atarget">GitOnline</a>
+							<a href="http://www.deepin.online" target="_blank" class="atarget">DeepinOline</a>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<!-- 娱乐面板开始 -->
+			<div id="Fun" class="container tab-pane fade"><br>
+				<div class="card">
+					<h3 class="card-header flexcenter">视频 + 音乐 + 文案</h3>
+					<div>
+						<div class="card-body flexcenter">
+							<a href="https://v.qq.com" class="atarget" target="_blank">腾讯视频</a>
+							<a href="http://www.iqiyi.com" class="atarget" target="_blank">爱奇艺</a>
+							<a href="https://www.youku.com" class="atarget" target="_blank">优酷</a>
+							<a href="https://www.bilibili.com" class="atarget" target="_blank">哔哩</a>
+							<a href="https://tv.sohu.com" class="atarget" target="_blank">搜狐</a>
+							<a href="http://www.baofeng.com" class="atarget" target="_blank">暴风</a>
+							<a href="https://www.mgtv.com" class="atarget" target="_blank">芒果</a>
+						</div>
+						<div class="card-body flexcenter">
+							<a href="https://music.163.com" class="atarget" target="_blank">网易音乐</a>
+							<a href="https://y.qq.com" class="atarget" target="_blank">QQ音乐</a>
+							<a href="http://music.baidu.com" class="atarget" target="_blank">百度音乐</a>
+							<a href="https://www.xiami.com" class="atarget" target="_blank">虾米音乐</a>
+							<a href="http://www.kuwo.cn" class="atarget" target="_blank">酷我音乐</a>
+							<a href="http://www.kugou.com" class="atarget" target="_blank">酷狗音乐</a>
+							<a href="http://www.yinyuetai.com" class="atarget" target="_blank">音悦台</a>
+							<a href="http://www.9ku.com" class="atarget" target="_blank">9Ku</a>
+							<a href="https://douban.fm/" class="atarget" target="_blank">豆瓣Fm</a>
+						</div>
+						<div class="card-body flexcenter">
+							<a href="https://fanyi.qq.com" class="atarget" target="_blank">腾讯翻译</a>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="Software" class="container tab-pane fade"><br>
+				<div class="card">
+					<h3 class="card-header flexcenter">软件</h3>
+					<div>
+						<div class="card-body flexcenter">
+							<a class="atarget" target="_blank" href="https://pc.qq.com">腾讯软件中心</a>
+							<a class="atarget" target="_blank" href="https://www.baidu.com/more">百度产品大全</a>
+							<a class="atarget" target="_blank" href="http://baoku.360.cn">奇虎软件宝库</a>
+							<a class="atarget" target="_blank" href="http://www.dyjqd.com">打印机驱动网</a>
+							<a class="atarget" target="_blank" href="http://www.ynxxwfw.com/download/weixinzhifubao.zip" download="weixinzhifubao.zip">收单宝PC版</a>
+							<a class="atarget" target="_blank" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.sdb.shoudanbao&from=singlemessage&isappinstalled=0">收单宝手机版</a>
+							<a class="atarget" target="_blank" href="https://cloud.tencent.com/document/product/569/12487">腾讯云支付下载</a>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="Marketplace" class="container tab-pane fade"><br>
+				<h3>Marketplace</h3>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+					aperiam.</p>
+			</div>
+			<div id="IssuesExplore" class="container tab-pane fade"><br>
+				<div class="card">
+					<h3 class="card-header flexcenter">搜索 + 地图 + 翻译</h3>
+					<div>
+						<div class="card-body flexcenter">
+							<a href="https://www.baidu.com" class="atarget" target="_blank">百度</a>
+							<a href="https://www.sogou.com" class="atarget" target="_blank">搜狗</a>
+							<a href="https://www.so.com" class="atarget" target="_blank">奇虎</a>
+							<a href="http://www.soso.com" class="atarget" target="_blank">搜搜</a>
+							<a href="http://www.google.com" class="atarget" target="_blank">谷歌</a>
+							<a href="http://www.bing.com" class="atarget" target="_blank">微软</a>
+						</div>
+						<div class="card-body flexcenter">
+							<a href="https://map.qq.com" class="atarget" target="_blank">腾讯地图</a>
+							<a href="https://map.baidu.com" class="atarget" target="_blank">百度地图</a>
+							<a href="https://www.amap.com" class="atarget" target="_blank">高德地图</a>
+							<a href="http://map.sogou.com" class="atarget" target="_blank">搜狗地图</a>
+							<a href="https://ditu.google.cn" class="atarget" target="_blank">谷歌地图</a>
+						</div>
+						<div class="card-body flexcenter">
+							<a href="https://fanyi.qq.com" class="atarget" target="_blank">腾讯翻译</a>
+							<a href="http://fanyi.youdao.com" class="atarget" target="_blank">有道翻译</a>
+							<a href="https://fanyi.baidu.com" class="atarget" target="_blank">百度翻译</a>
+							<a href="http://fy.iciba.com" class="atarget" target="_blank">金山翻译</a>
+							<a href="https://translate.google.cn" class="atarget" target="_blank">谷歌翻译</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="Request" class="container tab-pane fade"><br>
+				<h3>Request</h3>
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+					aperiam.</p>
+			</div>
 		</div>
+		<!-- 底部版权 -->
+		<footer>
+			<div class="weui-footer" style="padding-top: 30px;text-align: center;">
+				<p class="weui-footer__links">
+					<a href="https://bbs.deepin.org" target="_blank" class="weui-footer__link">深度</a>
+					<a href="https://bbs.deepin.org" target="_blank" class="weui-footer__link">深度</a>
+					<a href="https://bbs.deepin.org" target="_blank" class="weui-footer__link">深度</a>
+					<a href="https://bbs.deepin.org" target="_blank" class="weui-footer__link">深度</a>
+					<a href="https://bbs.deepin.org" target="_blank" class="weui-footer__link">深度</a>
+					<a href="https://bbs.deepin.org" target="_blank" class="weui-footer__link">深度</a>
+					<a href="https://bbs.deepin.org" target="_blank" class="weui-footer__link">深度</a>
+					<a href="https://bbs.deepin.org" target="_blank" class="weui-footer__link">深度</a>
+					<a href="https://www.baidu.com" target="_blank" class="weui-footer__link">百度</a>
+				</p>
+				<p class="weui-footer__text">Copyright © 2008 <a href="http://www.deepin.online" target="_blank">Deepin.Oline</a></p>
+			</div>
+		</footer>
+
 	</body>
 </html>
